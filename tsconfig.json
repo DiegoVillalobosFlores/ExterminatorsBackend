@@ -5,7 +5,7 @@
     "baseUrl": "src",
     "esModuleInterop": true,
     "isolatedModules": true,
-    "module": "ESNext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "noEmit": true,
     "resolveJsonModule": true,
