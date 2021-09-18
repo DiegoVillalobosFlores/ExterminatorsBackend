@@ -13,14 +13,14 @@ export default function ProductsMock() {
       price: 80,
     },
     '003': {
-      id: '002',
+      id: '003',
       name: 'Swatch',
-      price: 100,
+      price: 50,
     },
     '004': {
       id: '004',
       name: 'Casio',
-      price: 100,
+      price: 30,
     }
   };
 
