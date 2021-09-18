@@ -1,6 +1,6 @@
 import {Product} from "../types";
 
-export default function DB() {
+export default function ProductsMock() {
   const products: Record<string, Product> = {
     '001': {
       id: '001',
