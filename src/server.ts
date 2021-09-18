@@ -4,7 +4,7 @@ const server = fastify({logger: true});
 
 const start = async () => {
   try {
-    await server.listen(3000);
+    await server.listen(8080);
   } catch (e) {
     console.error(e);
   }
