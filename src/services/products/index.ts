@@ -1,5 +1,5 @@
 import Service from './service';
 
-export default () => {
-  return Service()
+export default (db: any) => {
+  return Service(db)
 }

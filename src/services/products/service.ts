@@ -1,9 +1,10 @@
 import Api from './api';
 
-export default function () {
-  const api = Api();
+export default function Service(dbClient: any) {
+  const dbInstance = dbClient();
+  const api = Api(dbInstance);
   return {
-    addProduct: api.add,
-    getProduct: api.get
+    add: api.add,
+    get: api.get
   }
 }
