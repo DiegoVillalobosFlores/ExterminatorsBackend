@@ -8,18 +8,30 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "ts-node src/server.ts"
+    "start": "ts-node src/server.ts",
+    "compile": "yarn tsc",
+    "test": "nyc ava"
   },
   "devDependencies": {
+    "ava": "3.15.0",
     "eslint": "7.32.0",
     "eslint-config-airbnb-base": "14.2.1",
     "eslint-config-molindo": "5.0.1",
     "eslint-plugin-only-ascii": "0.0.0",
+    "nyc": "15.1.0",
     "ts-node": "10.2.1",
     "typescript": "4.4.3"
   },
-  "module": "true",
   "dependencies": {
     "fastify": "3.21.1"
+  },
+  "ava": {
+    "verbose": true,
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
   }
 }

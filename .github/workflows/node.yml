@@ -34,5 +34,5 @@ jobs:
             ${{ runner.os }}-
       - run: npm install --global yarn
       - run: yarn
-      - run: yarn lint
+      - run: yarn compile
       - run: yarn test
