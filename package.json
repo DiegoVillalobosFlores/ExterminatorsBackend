@@ -10,7 +10,8 @@
   "scripts": {
     "start": "ts-node src/server.ts",
     "compile": "yarn tsc",
-    "test": "nyc ava"
+    "test": "ava",
+    "coverage": "nyc yarn test"
   },
   "devDependencies": {
     "ava": "3.15.0",
