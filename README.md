@@ -47,7 +47,7 @@ yarn
 ```
 
 #### Run
-The server can be ron by invoking the `start' script
+The server can be run by invoking the `start' script
 
 ```text
 yarn start
@@ -69,7 +69,7 @@ yarn compile
 #### Tests
 This project uses [AVA](https://github.com/avajs/ava) as its test framework.
 
-To run all tests you can run:
+To run all tests:
 
 ```text
 yarn test
