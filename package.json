@@ -2,13 +2,13 @@
   "name": "exterminators-backend",
   "version": "1.0.0",
   "description": "Backend challenge for Exterminators",
-  "main": "src/server.ts",
+  "main": "index.ts",
   "repository": "https://github.com/DiegoVillalobosFlores/ExterminatorsBackend.git",
   "author": "Villalobos <diegovillalobos397@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "ts-node src/server.ts",
+    "start": "ts-node index.ts",
     "compile": "yarn tsc",
     "test": "ava",
     "coverage": "nyc yarn test",
@@ -25,7 +25,8 @@
     "typescript": "4.4.3"
   },
   "dependencies": {
-    "fastify": "3.21.1"
+    "fastify": "3.21.1",
+    "got": "11.8.2"
   },
   "ava": {
     "verbose": true,

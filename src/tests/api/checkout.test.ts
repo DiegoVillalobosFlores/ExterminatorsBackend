@@ -1,5 +1,5 @@
 import anyTest, {TestInterface} from 'ava';
-import Checkout from "../../api/checkout";
+import Checkout from '../../api/checkout';
 
 const test = anyTest as TestInterface<{checkout: ReturnType<typeof Checkout>}>;
 
