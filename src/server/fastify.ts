@@ -1,5 +1,5 @@
 import fastify from 'fastify';
-import Route from '../types/route';
+import {Route} from '../types';
 
 export default function FastifyServer(routes: Array<Route>, logger: boolean = false){
   const server = fastify({logger});
