@@ -47,7 +47,7 @@ yarn
 ```
 
 #### Run
-The server can be run by invoking the `start' script
+The server can be run by invoking the `start` script
 
 ```text
 yarn start
