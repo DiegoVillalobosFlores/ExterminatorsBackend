@@ -8,7 +8,7 @@ const test = anyTest as TestInterface<{server: ReturnType<typeof FastifyServer>,
 
 test.before(async t => {
   t.context.server = FastifyServer(Routes);
-  t.context.address = await t.context.server.listen(44210);
+  t.context.address = await t.context.server.listen(44210, '0.0.0.0');
 })
 
 test.after.always(t => {
