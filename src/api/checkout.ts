@@ -1,8 +1,8 @@
-import Discounts from "../services/discounts/service";
-import Route from "../types/route";
-import DiscountsMock from "../mock/discountsDB";
-import Products from "../services/products/service";
-import ProductsMock from "../mock/productsDB";
+import Discounts from '../services/discounts/service';
+import DiscountsMock from '../mock/discountsDB';
+import Products from '../services/products/service';
+import ProductsMock from '../mock/productsDB';
+import {Route} from '../types';
 
 export default function Checkout() {
   const discounts = Discounts(DiscountsMock);
