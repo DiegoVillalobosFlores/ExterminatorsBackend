@@ -12,8 +12,18 @@ export default function Checkout() {
     [
       'post',
       '/checkout',
-      async (request) =>
+      async (request, response) =>
       {
+        if (!Array.isArray(request.body)) {
+          response.status(400);
+          throw new Error('Body must be of type array of strings')
+        }
+
+        if (!request.body.every((id: any) => typeof id === 'string')) {
+          response.status(400);
+          throw new Error('Body must be of type array of strings')
+        }
+
         const items = request.body.reduce(
           (acc: Record<string, number>, productId: string) =>
             ({...acc, [productId]: acc[productId] ? acc[productId] + 1 : 1}), {}
@@ -22,9 +32,17 @@ export default function Checkout() {
         let total = 0;
         for(const item of Object.entries(items)) {
           const [productId, amount] = item;
+
+          let product;
+          try {
+            product = await products.get({id: productId});
+          } catch (e) {
+            response.status(400);
+            throw e
+          }
+
           const parsedAmount = parseInt(amount as string, 10);
           const discount = await discounts.applyDiscount(productId, parsedAmount);
-          const product = await products.get({id: productId});
 
           total = total + (product.price * parsedAmount) + discount;
         }
