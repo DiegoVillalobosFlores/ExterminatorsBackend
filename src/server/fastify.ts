@@ -8,6 +8,6 @@ export default function FastifyServer(routes: Array<Route>, logger: boolean = fa
 
   return {
     server,
-    listen: (port: number) => server.listen(port)
+    listen: (port: string | number, host: string) => server.listen(port, host)
   }
 };
